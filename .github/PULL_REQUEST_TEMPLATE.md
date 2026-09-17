@@ -1,14 +1,5 @@
 ## Wat doet deze PR?
-<!-- Beschrijf in maximaal 3 zinnen wat je hebt gebouwd of opgelost.
-*
--->
+- Het koppelt issues aan elkaar en zorgt ervoor dat als je iets aanpast dat iemand anders dat kan zien door het te commiten.
+
 ## Gekoppeld aan issue(s):
-<!-- Link hier de GitHub issue uit jullie Kanban board (bijv: Fixes #12) -->
-*
-## Review Checklist (Voor de Reviewer):
-* [ ] Code is lokaal getest en breekt de app niet.
-* [ ] Geen verdwaalde
-`
-console.log()`
-of uitgecommentarieerde test-code.
-* [ ] Code is netjes geformatteerd en begrijpelijk.
+https://github.com/sem103434/Stop-De-Ontkoking/issues/3
