@@ -1,7 +1,7 @@
 # Team Charter: Stop De Ontkoking
 
 ## 1. Onze Ambitie
-* Wij willen als team minimaal een 8 halen voor het project. Daarnaast willen we leren om goed samen te werken met GitHub, duidelijke afspraken te maken en onze programmeer- en designvaardigheden te verbeteren.
+* willen als team minimaal een 8 halen voor het project. Daarnaast willen we leren om goed samen te werken met GitHub, duidelijke afspraken te maken en onze programmeer- en designvaardigheden te verbeteren.
 
 ## 2. Rol- en Taakverdeling
 *Iedereen schrijft code en ontwerpt, maar de Leads hakken de knopen door bij twijfel.*
