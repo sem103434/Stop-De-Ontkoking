@@ -1,4 +1,4 @@
-## Wat doet deze P?
+## Wat doet deze PR?
 <!-- Beschrijf in maximaal 3 zinnen wat je hebt gebouwd of opgelost.
 *
 -->
