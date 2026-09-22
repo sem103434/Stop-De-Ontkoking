@@ -7,9 +7,9 @@ Wij willen als team minimaal een 8 halen voor het project. Daarnaast willen we l
 *Iedereen schrijft code en ontwerpt, maar de Leads hakken de knopen door bij twijfel.*
 
 # Taakverdeling week 1:
-Musab:  Doelgroep + inspiratie onderzoeken, moodboard uitwerken.
-Sem:  Doelgroep onderzoeken + Doelgroep analyse uitwerken + back log bijwerken
-Diego: Project onderzoeken, Projectplan opstellen en uitwerken.
+* Musab:  Doelgroep + inspiratie onderzoeken, moodboard uitwerken.
+* Sem:  Doelgroep onderzoeken + Doelgroep analyse uitwerken + back log bijwerken
+* Diego: Project onderzoeken, Projectplan opstellen en uitwerken.
 
 ## 3. GitHub & Afspraken
 - Branching:** Niemand commit zonder overleg.
