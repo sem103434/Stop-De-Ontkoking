@@ -20,4 +20,4 @@
 
 ## 3. User Flow (Visueel)
 
-![User Flow Diagram](./assets/user-flow.png)
+![User Flow Diagram](/assets/user-flow.png)
