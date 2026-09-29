@@ -1,27 +1,23 @@
 # Fase 1: Empathize (Begrijp de gebruiker)
 
-  
-
 ## 1. Doelgroeponderzoek
+**Wie is onze gebruiker?** Onze gebruiker is iemand van Gen Z, ongeveer tussen de 15 en 29 jaar. Jongeren uit deze groep zijn vaak druk met school, werk en vrienden. Ze zoeken veel dingen op via hun telefoon en willen niet te veel geld uitgeven aan eten.
 
-* **Wie is onze gebruiker?** [Beschrijf de Gen Z student]
+**Pijnpunten (Pains):**
+*Eten bestellen is makkelijk, maar vaak duur.*
+*Er is niet altijd tijd of zin om te koken.*
+*Het is soms moeilijk om te bedenken wat je wilt eten.*
+*Je hebt niet altijd alle ingrediënten in huis.*
+*Sommige recepten zijn moeilijk of duren lang.*
 
-* **Pijnpunten (Pains):**
-
-* *[Bijv: Te weinig geld door dure bezorgdiensten]*
-
-* **Behoeftes (Gains):**
-
-* *[Bijv: Gezond willen eten, maar het mag max 20 minuten duren]*
-
-  
+**Behoeftes (Gains):**
+*Goedkope recepten die makkelijk te maken zijn.*
+*Gerechten die snel klaar zijn, bijvoorbeeld binnen 20 minuten.*
+*Duidelijke stappen die makkelijk te volgen zijn.*
+*Ingrediënten die je in een normale supermarkt kunt kopen.*
+*Snel inspiratie vinden voor een maaltijd.*
 
 ## 2. Empathy Map (Visueel)
-
-![Empathy Map](./assets/empathy-map-v1.png)
-
-  
-
+ 
 ## 3. Conclusie
-
-*Wat is het belangrijkste inzicht dat we meenemen naar de Define fase?*
+*Gen Z wil makkelijk een maaltijd vinden die lekker en betaalbaar is. Het recept moet niet te veel tijd kosten en duidelijk zijn. Dat nemen we mee naar de Define-fase.*
