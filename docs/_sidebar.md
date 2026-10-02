@@ -1,3 +1,4 @@
+- [Home](TEAM.md)
 - [Empathize](01-empathize.md)
 - [define](02-define.md)
 - [Ideate](03-ideate.md)
