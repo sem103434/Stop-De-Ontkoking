@@ -1,83 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop De Ontkoking</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-        }
-        /* De Sidebar Styling */
-        .sidebar {
-            width: 250px;
-            background-color: #2f3640;
-            color: white;
-            height: 100vh;
-            padding-top: 20px;
-            position: fixed;
-        }
-        .sidebar h2 {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .sidebar a {
-            padding: 15px 20px;
-            display: block;
-            color: #dcdde1;
-            text-decoration: none;
-        }
-        .sidebar a:hover {
-            background-color: #1e222b;
-            color: white;
-        }
-        /* De Hoofdcontent Styling */
-        .content {
-            margin-left: 250px;
-            padding: 40px;
-            flex-grow: 1;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Stop De Ontkoking</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- Het Docsify Thema -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-
-    <!-- De Sidebar Koppelingen -->
-    <div class="sidebar">
-        <h2>Stop De Ontkoking</h2>
-        <a href="index.html">Home (Team.md)</a>
-        <a href="./01-empathize.md">01. Empathize</a>
-        <a href="./02-define.md">02. Define</a>
-        <a href="./03-ideate.md">03. Ideate</a>
-        <a href="./04-prototype.md">04. Prototype</a>
-        <a href="./05-test.md">05. Test</a>
-    </div>
-
-    <!-- De Inhoud van de Pagina -->
-    <div class="content">
-        <h1>Team Charter: Stop De Ontkoking</h1>
-        
-        <h2>1. Onze Ambitie</h2>
-        <p>Wij willen als team minimaal een 8 halen voor het project...</p>
-
-        <h2>2. Rol- en Taakverdeling</h2>
-        <p><em>Iedereen schrijft code en ontwerpt, maar de Leads hakken de knopen door bij twijfel.</em></p>
-        
-        <h3>Taakverdeling week 1:</h3>
-        <ul>
-            <li><strong>Musab:</strong> Doelgroep + inspiratie onderzoeken, moodboard uitwerken.</li>
-            <li><strong>Sem:</strong> Doelgroep onderzoeken + Doelgroep analyse uitwerken + back log bijwerken.</li>
-            <li><strong>Diego:</strong> Project onderzoeken, Projectplan opstellen en uitwerken.</li>
-        </ul>
-
-        <h2>3. GitHub & Afspraken</h2>
-        <ul>
-            <li><strong>Branching:</strong> Niemand commit zonder overleg.</li>
-            <li><strong>Pull Requests (PR):</strong> Een PR mag pas worden gemerged...</li>
-        </ul>
-    </div>
-
+  <div id="app">Laden...</div>
+  <script>
+    window.$docsify = {
+      name: 'Stop De Ontkoking',
+      repo: '',
+      loadSidebar: true, // Schakelt de automatische sidebar in
+      homepage: 'README.md' // Je startpagina
+    }
+  </script>
+  <!-- Docsify JS -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>
