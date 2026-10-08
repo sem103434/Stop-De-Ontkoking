@@ -17,7 +17,7 @@
 *Ingrediënten die je in een normale supermarkt kunt kopen.*
 *Snel inspiratie vinden voor een maaltijd.*
 
-### 2. Persona Jayden, 18 jaar
+### Persona Jayden, 18 jaar
 
 | **Kenmerk** | **Beschrijving** |
 |---|---|
@@ -42,6 +42,10 @@
 - **Duidelijke uitleg** – simpele stappen die iedereen begrijpt.
 - **Recepten delen** – zelf gerechten posten en die van anderen bekijken.
 - **Inspiratie** – nieuwe gerechten ontdekken zonder lang te zoeken.
+
+### 2. Empathy Map (Visueel)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d74b5b33-d682-47b5-8983-3408875d4570" />
+
  
 ## 3. Conclusie
 *Gen Z wil makkelijk een maaltijd vinden die lekker en betaalbaar is. Het recept moet niet te veel tijd kosten en duidelijk zijn. Dat nemen we mee naar de Define-fase.*
