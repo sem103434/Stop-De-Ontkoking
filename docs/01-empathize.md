@@ -17,7 +17,31 @@
 *Ingrediënten die je in een normale supermarkt kunt kopen.*
 *Snel inspiratie vinden voor een maaltijd.*
 
-## 2. Empathy Map (Visueel)
+### 2. Persona Jayden, 18 jaar
+
+| **Kenmerk** | **Beschrijving** |
+|---|---|
+| Leeftijd | 18 jaar |
+| Situatie | MBO-student, woont bij zijn ouders |
+| Dagritme | School, sporten, gamen en vrienden |
+| Budget | Beperkt, verdient geld met een bijbaan |
+| Kookskills | Weinig ervaring, maakt vooral simpele gerechten |
+| Mediagedrag | Gebruikt TikTok en Instagram voor inspiratie |
+
+### Pains (pijnpunten)
+
+- **Weinig kookervaring** – weet vaak niet hoe hij moet beginnen.
+- **Geen inspiratie** – weet niet wat hij moet koken.
+- **Moeilijke recepten** – te veel ingrediënten en ingewikkelde stappen.
+- **Weinig tijd** – kiest liever voor snel eten of bestellen.
+
+### Gains (behoeftes)
+
+- **Makkelijke recepten** – gerechten die snel klaar zijn.
+- **Goedkoop koken** – recepten met betaalbare ingrediënten.
+- **Duidelijke uitleg** – simpele stappen die iedereen begrijpt.
+- **Recepten delen** – zelf gerechten posten en die van anderen bekijken.
+- **Inspiratie** – nieuwe gerechten ontdekken zonder lang te zoeken.
  
 ## 3. Conclusie
 *Gen Z wil makkelijk een maaltijd vinden die lekker en betaalbaar is. Het recept moet niet te veel tijd kosten en duidelijk zijn. Dat nemen we mee naar de Define-fase.*
