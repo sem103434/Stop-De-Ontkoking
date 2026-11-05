@@ -1,0 +1,962 @@
+:root {
+    --ink: #20372c;
+    --green: #315c40;
+    --lime: #e9f5d6;
+    --cream: #fffaf2;
+    --paper: #fff;
+    --orange: #ef8752;
+    --muted: #718078;
+    --line: #e8e8df;
+    --shadow: 0 18px 50px rgba(39,60,44,.09)
+}
+* {
+    box-sizing: border-box
+}
+html {
+    scroll-behavior: smooth
+}
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans',sans-serif;
+    font-size: 16px;
+    line-height: 1.55
+}
+a {
+    color: inherit
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 28px 72px
+}
+.site-header {
+    height: 84px;
+    padding: 0 max(28px,calc((100vw - 1180px)/2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,250,242,.96);
+    border-bottom: 1px solid rgba(32,55,44,.08);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(12px)
+}
+.logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1
+}
+.logo-mark {
+    font: 800 27px 'Manrope',sans-serif;
+    letter-spacing: -1.6px
+}
+.logo-mark span {
+    color: var(--orange)
+}
+.logo-sub {
+    font-size: 8px;
+    letter-spacing: 1.15px;
+    color: var(--muted);
+    font-weight: 700;
+    margin-top: 5px
+}
+.main-nav,.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px
+}
+.main-nav a,.nav-login {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--ink)
+}
+.main-nav a:hover,.nav-login:hover {
+    color: #63834f
+}
+.welcome-user {
+    font-size: 13px;
+    color: var(--muted)
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .18s,background .18s
+}
+.button:hover {
+    transform: translateY(-2px)
+}
+.button-dark {
+    background: var(--ink);
+    color: white
+}
+.button-dark:hover {
+    background: var(--green)
+}
+.button-light {
+    background: white;
+    color: var(--ink)
+}
+.button-small {
+    padding: 11px 17px;
+    font-size: 13px
+}
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+    font-weight: 700;
+    color: #6e8c51;
+    text-transform: uppercase
+}
+.hero {
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    margin: 20px 0 72px;
+    background: #dce8d0 url('../images/burrito-bowl.jpg') center 48%/cover;
+    display: flex;
+    align-items: center;
+    padding: 65px 7%;
+    isolation: isolate
+}
+.hero:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg,rgba(18,43,31,.84) 0%,rgba(18,43,31,.68) 40%,rgba(18,43,31,.05) 100%)
+}
+.hero-content {
+    max-width: 565px;
+    color: #fff
+}
+.hero .eyebrow {
+    color: #d5e9b9
+}
+.hero h1 {
+    font: 800 clamp(40px,5.5vw,67px)/1.04 'Manrope',sans-serif;
+    letter-spacing: -2.7px;
+    margin: 17px 0
+}
+.hero p {
+    max-width: 470px;
+    color: rgba(255,255,255,.88);
+    font-size: 17px;
+    margin: 0 0 25px
+}
+.zoekbalk {
+    display: flex;
+    max-width: 495px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 12px 36px rgba(0,0,0,.15)
+}
+.zoekbalk input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 16px;
+    border: 0!important;
+    background: transparent!important;
+    outline: none
+}
+.zoekbalk button,.filterbalk button {
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 21px;
+    background: #d86d43;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer
+}
+.hero-note {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-top: 19px;
+    color: rgba(255,255,255,.82);
+    font-size: 12px
+}
+.hero-note span {
+    color: #e2f1c6;
+    font-size: 16px
+}
+.section {
+    margin: 0 0 72px
+}
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 22px
+}
+.section-heading h2,.section h2 {
+    font: 750 31px/1.15 'Manrope',sans-serif;
+    letter-spacing: -1px;
+    margin: 5px 0 0
+}
+.section-heading p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 14px
+}
+.text-link {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px
+}
+.categorie-grid {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 13px
+}
+.categorie-kaart {
+    min-height: 102px;
+    padding: 15px 10px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s
+}
+.categorie-kaart:before {
+    content: '✳';
+    font-size: 23px;
+    color: #75945b
+}
+.categorie-kaart:nth-child(2):before {
+    content: '◉';
+    color: #ef8752
+}
+.categorie-kaart:nth-child(3):before {
+    content: '✿';
+    color: #d5a141
+}
+.categorie-kaart:nth-child(4):before {
+    content: '⌁';
+    color: #7aa1a0
+}
+.categorie-kaart:nth-child(5):before {
+    content: '✦';
+    color: #bd826b
+}
+.categorie-kaart:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: #cbd6c1
+}
+.recept-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 22px
+}
+.recept-kaart {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform .2s,box-shadow .2s
+}
+.recept-kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow)
+}
+.recept-kaart-afbeelding {
+    height: 205px;
+    background: #e4eadc;
+    position: relative;
+    overflow: hidden
+}
+.recept-kaart-afbeelding img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .4s
+}
+.recept-kaart:hover .recept-kaart-afbeelding img {
+    transform: scale(1.04)
+}
+.recept-kaart-afbeelding:after {
+    content: 'HONGER? FIXED!';
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: rgba(255,255,255,.93);
+    color: var(--green);
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    padding: 7px 10px;
+    border-radius: 999px
+}
+.recept-kaart-content {
+    padding: 17px 18px 19px
+}
+.recept-kaart h3 {
+    font: 700 19px/1.3 'Manrope',sans-serif;
+    margin: 0 0 7px
+}
+.recept-kaart p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0
+}
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0e9;
+    color: #718078;
+    font-size: 12px
+}
+.card-meta span:first-child {
+    color: #547044;
+    font-weight: 700
+}
+.feature-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #e8f0df;
+    min-height: 310px;
+    margin-bottom: 70px
+}
+.feature-copy {
+    padding: 46px 8%
+}
+.feature-copy h2 {
+    font: 750 34px/1.14 'Manrope',sans-serif;
+    letter-spacing: -1px;
+    margin: 13px 0
+}
+.feature-copy p {
+    color: #596e5f;
+    max-width: 440px
+}
+.feature-image {
+    background: url('../images/breakfast.jpg') center/cover;
+    min-height: 280px
+}
+.filterbalk {
+    display: flex;
+    gap: 10px;
+    max-width: 720px;
+    margin: 20px 0 30px
+}
+.filterbalk input,.filterbalk select {
+    flex: 1;
+    min-width: 160px;
+    padding: 13px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: white;
+    font: inherit
+}
+.account-shell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 610px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 28px auto;
+    max-width: 1000px
+}
+.account-photo {
+    background: linear-gradient(0deg,rgba(20,46,32,.68),rgba(20,46,32,.04)),url('../images/breakfast.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 48px;
+    color: #fff
+}
+.account-photo h2 {
+    font: 750 35px/1.15 'Manrope',sans-serif;
+    letter-spacing: -1px;
+    margin: 10px 0
+}
+.account-photo p {
+    color: rgba(255,255,255,.84);
+    max-width: 350px
+}
+.account-panel {
+    padding: 56px clamp(28px,6vw,70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.account-panel h1 {
+    font: 800 34px 'Manrope',sans-serif;
+    letter-spacing: -1.3px;
+    margin: 7px 0
+}
+.account-intro {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 24px
+}
+.account-formulier,.recept-formulier {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+.account-formulier label,.recept-formulier label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-weight: 600;
+    font-size: 13px
+}
+.account-formulier input,.recept-formulier input,.recept-formulier select,.recept-formulier textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dfe4dc;
+    border-radius: 11px;
+    background: #fff;
+    font: 400 15px 'DM Sans',sans-serif;
+    outline: none
+}
+.account-formulier input:focus,.recept-formulier input:focus {
+    border-color: #71905e;
+    box-shadow: 0 0 0 3px #eaf1e4
+}
+.account-formulier .button {
+    width: 100%;
+    margin-top: 5px
+}
+.account-switch {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 13px
+}
+.account-switch a {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: none
+}
+.foutmelding {
+    border-radius: 11px;
+    background: #fff0e9;
+    color: #a5462a;
+    padding: 11px 14px;
+    font-size: 13px
+}
+.site-footer {
+    background: #20372c;
+    color: #e8eee8;
+    padding: 34px 24px;
+    text-align: center;
+    font-size: 13px
+}
+.site-footer p {
+    margin: 0
+}
+.site-footer strong {
+    font: 800 18px 'Manrope',sans-serif
+}
+.recept-detail-foto {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 22px;
+    margin: 22px 0
+}
+.recept-detail h1,.container>h1 {
+    font: 800 clamp(32px,4vw,46px) 'Manrope',sans-serif;
+    letter-spacing: -1.5px
+}
+.recept-meta {
+    color: var(--muted)
+}
+.knop {
+    display: inline-flex;
+    padding: 11px 17px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: white;
+    text-decoration: none;
+    font-weight: 700
+}
+.knop-primair {
+    background: var(--green);
+    color: white;
+    border-color: var(--green)
+}
+.knop-gevaar {
+    color: #b54c37;
+    border-color: #e1a18f
+}
+.beheer-acties {
+    display: flex;
+    gap: 9px;
+    margin-top: 16px
+}
+.ingredient-rij {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px
+}
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px
+}
+.beheer-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: white
+}
+.beheer-tabel th,.beheer-tabel td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid var(--line)
+}
+.page-heading {
+    margin: 18px 0 26px;
+    padding: 30px 34px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: linear-gradient(130deg,#f0f5e9,#fff 72%);
+}
+.page-heading h1 { margin: 7px 0 4px; }
+.page-heading p,.veld-hint { color: var(--muted); font-size: 13px; }
+.page-heading p { margin: 0; }
+.recept-formulier-card {
+    max-width: 760px;
+    padding: clamp(20px,4vw,36px);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+.recept-formulier fieldset { border-color: #e4e9df; }
+.recept-formulier legend { padding: 0 8px; font-weight: 700; }
+.recept-formulier textarea { resize: vertical; line-height: 1.65; }
+.recept-formulier input[type=file] { padding: 11px; background: #fbfcf9; }
+.upload-veld { padding: 16px; border: 1px dashed #bdcbb5; border-radius: 14px; background: #f8faf5; }
+.bereidingsstappen { display: grid; gap: 12px; padding: 0; list-style: none; counter-reset: stappen; max-width: 760px; }
+.bereidingsstappen li { counter-increment: stappen; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; padding: 17px; background: #fff; border: 1px solid var(--line); border-radius: 15px; }
+.bereidingsstappen li:before { content: counter(stappen); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--lime); color: var(--green); font-weight: 800; }
+.recept-detail { max-width: 920px; margin: 0 auto; }
+.recept-detail h2 { margin-top: 30px; font: 750 25px 'Manrope',sans-serif; letter-spacing: -.5px; }
+.recept-detail ul { padding-left: 22px; line-height: 1.9; }
+.recept-detail-foto { max-height: 500px; }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { outline: 3px solid #a7c487; outline-offset: 3px; }
+@media(max-width:850px) {
+    .site-header {
+        height: auto;
+        min-height: 76px;
+        padding: 14px 22px;
+        gap: 16px;
+        flex-wrap: wrap
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+        padding: 8px 0 2px
+    }
+    .nav-actions {
+        gap: 13px
+    }
+    .welcome-user {
+        display: none
+    }
+    .hero {
+        min-height: 430px
+    }
+    .categorie-grid {
+        grid-template-columns: repeat(3,1fr)
+    }
+    .recept-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr))
+    }
+    .account-shell {
+        grid-template-columns: .8fr 1fr
+    }
+    .account-photo {
+        padding: 30px
+    }
+    .account-panel {
+        padding: 40px 28px
+    }
+}
+@media(max-width:580px) {
+    .container {
+        padding: 15px 17px 48px
+    }
+    .page-heading { padding: 23px 20px; }
+    .recept-formulier-card { padding: 18px; }
+    .ingredient-rij { flex-wrap: wrap; }
+    .ingredient-rij input:first-child { flex-basis: 100%; }
+    .bereidingsstappen li { padding: 13px; }
+    .site-header {
+        padding: 13px 17px
+    }
+    .logo-mark {
+        font-size: 24px
+    }
+    .logo-sub {
+        font-size: 7px
+    }
+    .main-nav {
+        justify-content: space-between;
+        gap: 8px
+    }
+    .main-nav a,.nav-login {
+        font-size: 12px
+    }
+    .nav-actions {
+        gap: 9px
+    }
+    .button-small {
+        padding: 9px 12px;
+        font-size: 11px
+    }
+    .hero {
+        min-height: 480px;
+        margin: 12px 0 52px;
+        padding: 32px 23px;
+        border-radius: 18px;
+        background-position: 57% center
+    }
+    .hero:before {
+        background: linear-gradient(90deg,rgba(18,43,31,.84),rgba(18,43,31,.37))
+    }
+    .hero h1 {
+        font-size: 44px;
+        letter-spacing: -2px
+    }
+    .hero p {
+        font-size: 15px
+    }
+    .zoekbalk {
+        border-radius: 15px;
+        flex-wrap: wrap
+    }
+    .zoekbalk input {
+        flex-basis: 100%;
+        padding: 9px 12px
+    }
+    .zoekbalk button {
+        width: 100%
+    }
+    .section {
+        margin-bottom: 52px
+    }
+    .section-heading h2,.section h2 {
+        font-size: 25px
+    }
+    .section-heading {
+        align-items: start;
+        gap: 12px
+    }
+    .section-heading p {
+        font-size: 12px
+    }
+    .text-link {
+        font-size: 12px;
+        white-space: nowrap;
+        margin-top: 8px
+    }
+    .categorie-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 9px
+    }
+    .categorie-kaart {
+        min-height: 88px
+    }
+    .recept-grid {
+        grid-template-columns: 1fr;
+        gap: 15px
+    }
+    .recept-kaart-afbeelding {
+        height: 220px
+    }
+    .feature-band {
+        grid-template-columns: 1fr;
+        margin-bottom: 50px
+    }
+    .feature-copy {
+        padding: 30px 25px
+    }
+    .feature-copy h2 {
+        font-size: 29px
+    }
+    .feature-image {
+        min-height: 210px;
+        grid-row: 1
+    }
+    .filterbalk {
+        flex-direction: column
+    }
+    .account-shell {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto
+    }
+    .account-photo {
+        min-height: 205px;
+        padding: 25px
+    }
+    .account-photo h2 {
+        font-size: 27px
+    }
+    .account-panel {
+        padding: 30px 22px
+    }
+    .account-panel h1 {
+        font-size: 30px
+    }
+}
+.site-footer {
+    background: #1d3428;
+    color: #f6f5e9;
+    padding: 0 24px;
+    font-size: 14px;
+    text-align: left
+}
+.footer-callout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 34px 42px;
+    background: #e5efd9;
+    color: #20372c;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    transform: translateY(-20px)
+}
+.footer-callout .eyebrow {
+    color: #62814d
+}
+.footer-callout h2 {
+    font: 800 clamp(23px,3vw,34px)/1.15 'Manrope',sans-serif;
+    letter-spacing: -1px;
+    margin: 7px 0 0;
+    max-width: 570px
+}
+.footer-main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 17px 0 48px;
+    display: grid;
+    grid-template-columns: 1.35fr .75fr .85fr 1.05fr 1fr;
+    gap: 30px
+}
+.footer-logo {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font: 800 35px/1 'Manrope',sans-serif;
+    letter-spacing: -2px
+}
+.footer-logo span {
+    color: #ef8752
+}
+.footer-brand>p {
+    color: #c0c9bd;
+    max-width: 275px;
+    font-size: 13px;
+    margin: 17px 0 19px
+}
+.footer-column h3,.footer-location h3 {
+    font: 700 14px 'Manrope',sans-serif;
+    color: #fff;
+    margin: 6px 0 17px
+}
+.footer-column>a {
+    display: block;
+    color: #cbd2c9;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.45
+}
+.footer-column>a:hover,.footer-socials a:hover,.footer-location a:hover {
+    color: #e9c39d
+}
+.footer-contact>a {
+    margin: 0 0 13px
+}
+.footer-contact strong,.footer-contact span {
+    display: block
+}
+.footer-contact strong {
+    color: #f6f5e9;
+    font-size: 13px
+}
+.footer-contact span {
+    color: #c0c9bd;
+    font-size: 12px;
+    margin-top: 2px
+}
+.footer-location {
+    display: flex;
+    gap: 12px;
+    color: #cbd2c9
+}
+.footer-location-icon {
+    width: 33px;
+    height: 33px;
+    flex: 0 0 33px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #506555;
+    border-radius: 50%;
+    color: #d5e8c6;
+    font-size: 20px
+}
+.footer-location h3 {
+    margin-top: 4px
+}
+.footer-location p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 10px
+}
+.footer-location a {
+    color: #d5e8c6;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none
+}
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px
+}
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #506555;
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: #e6ede1;
+    text-decoration: none;
+    font-size: 11px
+}
+.footer-socials a span {
+    color: #e9c39d
+}
+.footer-brand .social-note {
+    font-size: 11px;
+    color: #98a99b;
+    margin: 10px 0 0
+}
+.footer-bottom {
+    max-width: 1180px;
+    margin: 0 auto;
+    border-top: 1px solid #405647;
+    padding: 18px 0 23px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #aebbb0;
+    font-size: 11px
+}
+@media(max-width:1000px) {
+    .footer-main {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 28px
+    }
+    .footer-brand {
+        grid-row: span 2
+    }
+    .footer-location {
+        grid-column: 2/4
+    }
+}
+@media(max-width:650px) {
+    .site-footer {
+        padding: 0 17px
+    }
+    .footer-callout {
+        padding: 25px 23px;
+        display: block;
+        transform: translateY(-14px);
+        border-radius: 18px
+    }
+    .footer-callout .button {
+        margin-top: 20px
+    }
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 27px 18px;
+        padding: 8px 0 33px
+    }
+    .footer-brand {
+        grid-column: 1/-1;
+        grid-row: auto
+    }
+    .footer-brand>p {
+        max-width: 440px
+    }
+    .footer-column h3,.footer-location h3 {
+        margin-bottom: 12px
+    }
+    .footer-location {
+        grid-column: 1/-1
+    }
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-bottom: 21px
+    }
+}
+.brand-logo {
+    display: block;
+    width: 196px;
+    height: auto
+}
+.footer-logo-image {
+    display: block;
+    width: 190px;
+    height: auto
+}
+.footer-logo {
+    display: inline-block;
+    line-height: 0
+}
+@media(max-width:580px) {
+    .brand-logo {
+        width: 160px
+    }
+    .footer-logo-image {
+        width: 175px
+    }
+}
