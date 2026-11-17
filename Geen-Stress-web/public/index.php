@@ -10,14 +10,13 @@ require __DIR__ . '/../includes/header.php';
 ?>
 <section class="hero">
     <div class="hero-content">
-        <span class="eyebrow">Geen </span>
+        <span class="eyebrow">Geen Stress</span>
         <h1>Wat eten we vandaag?</h1>
-        <p>Maak je niet druk over wat je eet vandaag, Geen Stress! Ontdek lekkere recepten en vind makkelijk iets waar je zin in hebt.</p>
+        <p>Maak je niet druk over wat je eet vandaag, Geen Stress! Maak een keuze uit lekkere en gemakkelijke recepten.</p>
         <form action="overzicht.php" method="get" class="zoekbalk">
             <input type="search" name="q" placeholder="Waar heb je zin in?" aria-label="Zoek een recept">
             <button type="submit">Vind recepten <span aria-hidden="true">→</span></button>
         </form>
-        <div class="hero-note"><span aria-hidden="true">🍟</span> Honger level: 99/10 · Chef-modus: aan!</div>
     </div>
 </section>
 
@@ -25,8 +24,8 @@ require __DIR__ . '/../includes/header.php';
     <div class="section-heading">
         <div>
             <span class="eyebrow">Waar heb je zin in?</span>
-            <h2>Ontdek op smaak</h2>
-            <p>Voor elke trek een lekker idee.</p>
+            <h2>Neem een kijkje</h2>
+            <p></p>
         </div>
         <a class="text-link" href="overzicht.php">Alle recepten →</a>
     </div>
@@ -57,13 +56,15 @@ require __DIR__ . '/../includes/header.php';
             <a class="recept-kaart" href="detail.php?id=<?= (int) $r['id'] ?>">
                 <div class="recept-kaart-afbeelding">
                     <img src="<?= h(recept_afbeelding($r)) ?>" alt="<?= h($r['titel']) ?>" loading="lazy">
+                    <?php if ($r['dieet']): ?>
+                        <span class="dieet-badge dieet-badge--<?= h($r['dieet']) ?>"><?= $r['dieet'] === 'vegan' ? 'Vegan' : 'Halal' ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="recept-kaart-content">
                     <h3><?= h($r['titel']) ?></h3>
                     <p><?= h($r['categorie_naam']) ?> · door <?= h($r['auteur']) ?></p>
                     <div class="card-meta">
-                        <span>Honger? Probleem opgelost ✨</span>
-                        <span>Bekijk recept&nbsp; →</span>
+                        <span>Bekijk recept -></span>
                     </div>
                 </div>
             </a>

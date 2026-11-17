@@ -27,7 +27,6 @@ require __DIR__ . '/../includes/header.php';
 ?>
 <section class="account-shell">
     <div class="account-photo">
-        <span class="eyebrow">Koken brengt samen</span>
         <h2>Jouw nieuwe favoriete plek voor eten.</h2>
         <p>Bewaar inspiratie, ontdek gerechten en deel de recepten waar jij trots op bent.</p>
     </div>

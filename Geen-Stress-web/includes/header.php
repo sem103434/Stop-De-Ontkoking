@@ -17,10 +17,10 @@
         <img class="brand-logo" src="images/geen-stress-logo.png" alt="Geen Stress — lekker koken, zonder gedoe">
     </a>
     <nav class="main-nav" aria-label="Hoofdnavigatie">
-        <a href="overzicht.php">Recepten</a>
-        <a href="overzicht.php">Ontdek</a>
+        <a href="index.php">Home</a>
+        <a href="overzicht.php">recepten</a>
         <?php if (is_ingelogd()): ?>
-            <a href="invoer.php">Recept delen</a>
+            <a href="invoer.php">Recept toevoegen</a>
             <?php if (is_admin()): ?>
                 <a href="admin.php">Beheer</a>
             <?php endif; ?>
@@ -32,7 +32,7 @@
             <a class="nav-login" href="logout.php">Uitloggen</a>
         <?php else: ?>
             <a class="nav-login" href="login.php">Inloggen</a>
-            <a class="button button-dark button-small" href="registreren.php">Account maken <span aria-hidden="true">↗</span></a>
+            <a class="button button-dark button-small" href="registreren.php">Registreren<span aria-hidden="true">↗</span></a>
         <?php endif; ?>
     </div>
 </header>

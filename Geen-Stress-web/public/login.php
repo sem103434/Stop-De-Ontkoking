@@ -19,14 +19,13 @@ require __DIR__ . '/../includes/header.php';
 ?>
 <section class="account-shell">
     <div class="account-photo">
-        <span class="eyebrow">Welkom terug</span>
         <h2>Er staat iets lekkers op je te wachten.</h2>
         <p>Log in en ontdek weer nieuwe ideeën voor aan tafel.</p>
     </div>
     <div class="account-panel">
-        <span class="eyebrow">Fijn dat je er bent</span>
+        <span class="eyebrow">Welkom terug</span>
         <h1>Inloggen</h1>
-        <p class="account-intro">Log in op je account en ga lekker verder.</p>
+        <p class="account-intro">Log in op je account</p>
         <?php if ($fout): ?><p class="foutmelding" role="alert"><?= h($fout) ?></p><?php endif; ?>
         <form method="post" class="account-formulier">
             <label>
@@ -39,7 +38,7 @@ require __DIR__ . '/../includes/header.php';
             </label>
             <button type="submit" class="button button-dark">Inloggen <span aria-hidden="true">→</span></button>
         </form>
-        <p class="account-switch">Nog geen account? <a href="registreren.php">Maak er gratis een aan</a></p>
+        <p class="account-switch">Nog geen account? <a href="registreren.php">registreer hier</a></p>
     </div>
 </section>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

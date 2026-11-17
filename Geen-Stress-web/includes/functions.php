@@ -4,12 +4,24 @@ function haal_categorieen(PDO $pdo): array
     return $pdo->query('SELECT * FROM categorieen ORDER BY naam')->fetchAll();
 }
 
+function dieet_label(int $heeftVarkensvlees, int $heeftDierlijk): ?string
+{
+    if ($heeftVarkensvlees) {
+        return null;
+    }
+    return $heeftDierlijk ? 'halal' : 'vegan';
+}
+
 function zoek_recepten(PDO $pdo, ?string $zoekterm, ?int $categorieId): array
 {
-    $sql = 'SELECT r.*, c.naam AS categorie_naam, g.naam AS auteur
+    $sql = 'SELECT r.*, MAX(c.naam) AS categorie_naam, MAX(g.naam) AS auteur,
+            COALESCE(MAX(i.varkensvlees), 0) AS heeft_varkensvlees,
+            COALESCE(MAX(i.dierlijk), 0) AS heeft_dierlijk
             FROM recepten r
             JOIN categorieen c ON c.id = r.categorie_id
             JOIN gebruikers g ON g.id = r.gebruiker_id
+            LEFT JOIN recept_ingredienten ri ON ri.recept_id = r.id
+            LEFT JOIN ingredienten i ON i.id = ri.ingredient_id
             WHERE 1=1';
     $params = [];
 
@@ -20,18 +32,24 @@ function zoek_recepten(PDO $pdo, ?string $zoekterm, ?int $categorieId): array
 
     if ($zoekterm) {
         $sql .= ' AND (r.titel LIKE ? OR EXISTS (
-            SELECT 1 FROM recept_ingredienten ri
-            JOIN ingredienten i ON i.id = ri.ingredient_id
-            WHERE ri.recept_id = r.id AND i.naam LIKE ?
+            SELECT 1 FROM recept_ingredienten ri2
+            JOIN ingredienten i2 ON i2.id = ri2.ingredient_id
+            WHERE ri2.recept_id = r.id AND i2.naam LIKE ?
         ))';
         $params[] = '%' . $zoekterm . '%';
         $params[] = '%' . $zoekterm . '%';
     }
 
-    $sql .= ' ORDER BY r.aangemaakt_op DESC';
+    $sql .= ' GROUP BY r.id ORDER BY r.aangemaakt_op DESC';
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
-    return $stmt->fetchAll();
+    $recepten = $stmt->fetchAll();
+
+    foreach ($recepten as &$recept) {
+        $recept['dieet'] = dieet_label((int) $recept['heeft_varkensvlees'], (int) $recept['heeft_dierlijk']);
+    }
+
+    return $recepten;
 }
 
 function haal_recept(PDO $pdo, int $id): ?array
@@ -47,12 +65,21 @@ function haal_recept(PDO $pdo, int $id): ?array
         return null;
     }
 
-    $stmt = $pdo->prepare('SELECT i.naam, i.eenheid, ri.hoeveelheid
+    $stmt = $pdo->prepare('SELECT i.naam, i.eenheid, i.dierlijk, i.varkensvlees, ri.hoeveelheid
                             FROM recept_ingredienten ri
                             JOIN ingredienten i ON i.id = ri.ingredient_id
                             WHERE ri.recept_id = ?');
     $stmt->execute([$id]);
     $recept['ingredienten'] = $stmt->fetchAll();
+
+    $heeftVarkensvlees = 0;
+    $heeftDierlijk = 0;
+    foreach ($recept['ingredienten'] as $ingredient) {
+        $heeftVarkensvlees = $heeftVarkensvlees || $ingredient['varkensvlees'];
+        $heeftDierlijk = $heeftDierlijk || $ingredient['dierlijk'];
+    }
+    $recept['dieet'] = dieet_label((int) $heeftVarkensvlees, (int) $heeftDierlijk);
+
     return $recept;
 }
 

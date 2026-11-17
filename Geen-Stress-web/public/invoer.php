@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categorieId = (int) ($_POST['categorie_id'] ?? 0);
     $bereidingswijze = trim($_POST['bereidingswijze'] ?? '');
     $bereidingstijd = $_POST['bereidingstijd_min'] !== '' ? (int) $_POST['bereidingstijd_min'] : null;
+    $personen = ($_POST['personen'] ?? '') !== '' ? max(1, (int) $_POST['personen']) : 1;
     $ingredientNamen = $_POST['ingredient_naam'] ?? [];
     $ingredientHoeveelheden = $_POST['ingredient_hoeveelheid'] ?? [];
     $ingredientEenheden = $_POST['ingredient_eenheid'] ?? [];
@@ -52,18 +53,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($bewerken) {
             $stmt = $pdo->prepare(
                 'UPDATE recepten
-                SET titel = ?, categorie_id = ?, bereidingswijze = ?, bereidingstijd_min = ?, afbeelding_url = ?
+                SET titel = ?, categorie_id = ?, bereidingswijze = ?, bereidingstijd_min = ?, standaard_personen = ?, afbeelding_url = ?
                 WHERE id = ?'
             );
-            $stmt->execute([$titel, $categorieId, $bereidingswijze, $bereidingstijd, $uploadPad, $id]);
+            $stmt->execute([$titel, $categorieId, $bereidingswijze, $bereidingstijd, $personen, $uploadPad, $id]);
             $pdo->prepare('DELETE FROM recept_ingredienten WHERE recept_id = ?')->execute([$id]);
             $receptId = $id;
         } else {
             $stmt = $pdo->prepare(
-                'INSERT INTO recepten (gebruiker_id, categorie_id, titel, bereidingswijze, bereidingstijd_min, afbeelding_url)
-                VALUES (?, ?, ?, ?, ?, ?)'
+                'INSERT INTO recepten (gebruiker_id, categorie_id, titel, bereidingswijze, bereidingstijd_min, standaard_personen, afbeelding_url)
+                VALUES (?, ?, ?, ?, ?, ?, ?)'
             );
-            $stmt->execute([$_SESSION['gebruiker_id'], $categorieId, $titel, $bereidingswijze, $bereidingstijd, $uploadPad]);
+            $stmt->execute([$_SESSION['gebruiker_id'], $categorieId, $titel, $bereidingswijze, $bereidingstijd, $personen, $uploadPad]);
             $receptId = (int) $pdo->lastInsertId();
         }
 
@@ -116,6 +117,11 @@ require __DIR__ . '/../includes/header.php';
     <label>
         Bereidingstijd (minuten)
         <input type="number" name="bereidingstijd_min" min="0" value="<?= h((string) ($recept['bereidingstijd_min'] ?? '')) ?>">
+    </label>
+
+    <label>
+        Aantal personen (basis)
+        <input type="number" name="personen" min="1" max="12" value="<?= h((string) ($recept['standaard_personen'] ?? 1)) ?>">
     </label>
 
     <label class="upload-veld">

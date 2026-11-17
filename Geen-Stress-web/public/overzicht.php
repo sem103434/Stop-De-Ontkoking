@@ -37,6 +37,9 @@ require __DIR__ . '/../includes/header.php';
         <a class="recept-kaart" href="detail.php?id=<?= (int) $r['id'] ?>">
             <div class="recept-kaart-afbeelding">
                 <img src="<?= h(recept_afbeelding($r)) ?>" alt="<?= h($r['titel']) ?>" loading="lazy">
+                <?php if ($r['dieet']): ?>
+                    <span class="dieet-badge dieet-badge--<?= h($r['dieet']) ?>"><?= $r['dieet'] === 'vegan' ? 'Vegan' : 'Halal' ?></span>
+                <?php endif; ?>
             </div>
             <div class="recept-kaart-content">
                 <h3><?= h($r['titel']) ?></h3>
