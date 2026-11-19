@@ -1,7 +1,5 @@
 # Fase 3: Ideate (Oplossingen bedenken)
 
-  
-
 ## 1. Concepten
 
 * **How-Might-We – Geen Stress**
