@@ -60,6 +60,7 @@ Moderated usability test van ±10 minuten per persoon, hardop denkend:
 * **SEQ** (Single Ease Question, 1–7): "Hoe makkelijk was deze taak?" Doel: gemiddeld ≥ 5,5.
 * **SUS** (System Usability Scale, 10 vragen): doel ≥ 68 (landelijk gemiddelde); ons streven is ≥ 80.
 * **Succescriterium project:** ≥ 80% van de taken zonder hulp geslaagd.
+<<<<<<< HEAD
 
 ## 2. Eisencheck (gebouwd vs. Programma van Eisen)
 
@@ -183,3 +184,5 @@ Dit is **geen** gebruikerstest, maar een controle door het team van code en ontw
 ### 5.3 Conclusie
 
 *Nog in te vullen na de gebruikerstest: is het doel uit Define (snel en goedkoop een recept vinden zonder gedoe) gehaald? Wat nemen we mee naar een volgende iteratie?*
+=======
+>>>>>>> 244fcb251800791b872a4e0bf7e3d4b6efd402a9
