@@ -24,7 +24,7 @@ Geen Stress is een overzichtelijke receptenwebsite voor jongeren die makkelijk, 
 Op de homepage worden recepten van andere gebruikers weergegeven. Via ons **Hottest-systeem** komen de populairste recepten bovenaan te staan. Bezoekers kunnen ook recepten vinden via verschillende categorieën of de zoekbalk. Elk recept heeft een eigen detailpagina met ingrediënten en bereidingsstappen.
 
 Gebruikers kunnen een account aanmaken en krijgen daarmee een eigen profiel. Ze kunnen zelf recepten plaatsen, hun eigen recepten aanpassen of verwijderen en reageren op recepten van anderen. Beheerders kunnen recepten en gebruikers beheren.
-Bij het ontwerpen houden we de **UI rustig, duidelijk en gebruiksvriendelijk**. We gebruiken rustige kleuren, overzichtelijke pagina's en duidelijke knoppen. Zo voorkomen we dat bezoekers worden afgeleid of in de war raken.
+Bij het ontwerpen houden we de **duidelijk en gebruiksvriendelijk**. We gebruiken rustige kleuren, overzichtelijke pagina's en duidelijke knoppen. Zo voorkomen we dat bezoekers worden afgeleid of in de war raken.
 Met Geen Stress willen we een plek creëren waar jongeren eenvoudig recepten kunnen ontdekken, hun eigen ideeën kunnen delen en elkaar kunnen inspireren om vaker zelf te koken.
 
   
