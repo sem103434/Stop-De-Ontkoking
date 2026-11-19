@@ -1,6 +1,6 @@
 # Fase 4: Prototype (Ontwerp & Techniek)
 
-In deze fase vertalen we het eindconcept uit [Ideate](03-ideate.md) naar schermen en een werkende website. We gingen van **lo-fi** (zwart-wit wireframes, alleen indeling) naar **hi-fi** (kleur, foto's, huisstijl) naar een **werkend prototype** in PHP.
+In deze fase vertalen we het eindconcept uit [Ideate](03-ideate.md) naar schermen en een werkende website. We gingen van **lo-fi** naar **hi-fi** naar een **werkend prototype** in PHP.
 
 ## 1. Sitemap & user flow
 
@@ -20,7 +20,7 @@ De sitemap laat zien welke pagina's er zijn en wie ze mag zien. De [user flow](0
 
 ## 2. Wireframes (Lo-Fi)
 
-We begonnen met zwart-wit wireframes zonder kleur of foto's, zodat we alleen over **indeling en navigatie** praten. Elk scherm heeft genummerde toelichtingen.
+We begonnen met zwart-wit wireframes zonder kleur of foto's, zodat we alleen over **indeling en navigatie** praten.
 
 ### 2.1 Desktop
 
@@ -73,15 +73,16 @@ Het hi-fi ontwerp gebruikt de echte huisstijl en foto's van de website.
 
 ### 3.3 Responsive gedrag
 
-De CSS heeft breekpunten op **1000, 850, 650 en 580 px**. Op mobiel komen de navigatielinks in een eigen rij onder het logo (geen hamburgermenu) en staan de kaarten in één kolom of twee kolommen (≤ 850 px).
+Op mobiel komen de navigatielinks in een eigen rij onder het logo en staan de kaarten in één kolom of twee kolommen.
 
 ## 4. Technische architectuur
 
 ### 4.1 Stack
 
-* **Frontend:** HTML5, CSS3 (één stylesheet, CSS-variabelen), vanilla JavaScript (alleen de personen-kiezer). Geen framework. Lettertypen via Google Fonts.
-* **Backend:** PHP 8+ met PDO, server-side gerenderde pagina's, sessies voor inloggen.
-* **Data:** MySQL/MariaDB (InnoDB, utf8mb4). Afbeeldingen van gebruikers komen in `public/uploads/`.
+* **Frontend:** HTML, CSS (één stylesheet, CSS-variabelen), JavaScript.
+* **Backend:** PHP & PDO, server-side gerenderde pagina's.
+* **Data:** MySQL.
+Afbeeldingen van gebruikers komen in `public/uploads/`.
 * **Hosting:** Plesk; document root is de map `public/`.
 
 ### 4.2 Mappenstructuur
@@ -123,8 +124,6 @@ Browser → public/pagina.php
 * Een recept heeft veel ingrediënten via de koppeltabel `recept_ingredienten`, met de hoeveelheid per recept.
 * De dieetbadge wordt berekend uit de vlaggen `dierlijk` en `varkensvlees` op `ingredienten`.
 * Rollen: `gebruiker` en `admin`.
-
-> ⚠️ **Let op:** de rood gemarkeerde kolommen gebruikt de code al, maar ze staan nog niet in `schema.sql`. Zie [05. Test → bevindingen](05-test.md).
 
 ### 4.5 Installatie (Plesk)
 
