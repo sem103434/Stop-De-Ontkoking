@@ -10,7 +10,7 @@ Deze pagina bestaat uit vier delen:
 > **Status:** onderdelen 1–3 zijn ingevuld. De gebruikerstest (onderdeel 4) is nog niet uitgevoerd; de resultaattabellen zijn bewust leeg gelaten, zodat we alleen echte testdata invullen.
 
 
-## 1. Testopze
+## 1. Testopzet
 
 ### 1.1 Wat testen we?
 
