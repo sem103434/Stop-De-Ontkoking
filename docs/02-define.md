@@ -3,7 +3,7 @@
 ## 1. De Probleemstelling (Point of View)
 *Jongeren van Gen Z hebben een makkelijke manier nodig om snelle en goedkope recepten te vinden, omdat ze vaak weinig tijd en geld hebben en soms niet weten wat ze kunnen koken.*
 
-## 2. Programma van Eisen (MoSCoW)
+## 2. MoSCoW
 **Must Haves:**
 * De app moet responsive zijn (Mobile First).
 * De gebruiker moet recepten kunnen bekijken.
