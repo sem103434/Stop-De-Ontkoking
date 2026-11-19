@@ -1,6 +1,6 @@
 # Stop De Ontkoking
 
-> **Geen Stress** – lekker koken, zonder gedoe.
+> **Geen Stress** – Druk maken over wat je wilt eten? Geen stress!
 
 Een receptenwebsite voor jongeren (Gen Z, 15–29 jaar) die snel, goedkoop en makkelijk willen koken, ook als ze weinig ervaring hebben. Bezoekers zoeken en bekijken recepten; met een account deel je je eigen recepten met de community.
 
