@@ -40,3 +40,12 @@ Musab, Sem en Diego. Afspraken, risico's en consequenties staan in de [Team Char
 ## Zelf draaien
 
 Zie de installatiestappen in [Technische architectuur → Installatie](04-prototype.md?id=45-installatie-plesk) of het bestand `Geen-Stress-web/README.md`.
+
+
+## Leren tabellen maken
+
+
+| Kolom 1 | Kolom 2 | Kolom 3 |
+| --- | --- | --- |
+| Rij 1, Cel 1 | Rij 1, Cel 2 | Rij 1, Cel 3 |
+| Rij 2, Cel 1 | Rij 2, Cel 2 | Rij 2, Cel 3 |
