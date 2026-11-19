@@ -10,7 +10,7 @@ require __DIR__ . '/../includes/header.php';
 ?>
 <section class="hero">
     <div class="hero-content">
-        <span class="eyebrow">Geen Stresss</span>
+        <span class="eyebrow">Geen Stress</span>
         <h1>Wat eten we vandaag?</h1>
         <p>Maak je niet druk over wat je eet vandaag, Geen Stress! Maak een keuze uit lekkere en gemakkelijke recepten.</p>
         <form action="overzicht.php" method="get" class="zoekbalk">
