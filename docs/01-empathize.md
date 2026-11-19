@@ -1,4 +1,4 @@
-# Fase 1: Empathize (Begrijp de gebruiker)
+# Fase 1: Empathize
 
 ## 1. Doelgroeponderzoek
 **Wie is onze gebruiker?** Onze gebruiker is iemand van Gen Z, ongeveer tussen de 15 en 29 jaar. Jongeren uit deze groep zijn vaak druk met school, werk en vrienden. Ze zoeken veel dingen op via hun telefoon en willen niet te veel geld uitgeven aan eten.
